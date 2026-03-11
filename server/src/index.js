@@ -102,9 +102,9 @@ app.get("/get-one-animal-by-name/:name", async (req, res) => {
 
 // 3. GET /get-one-animal-by-id/:id
 
-app.get("/get-newest-animal", async (req, res) => {
+app.get("/get-one-animal-by-id/:id", async (req, res) => {
     const id = req.params.id;
-    const animal = await getOneAnimalById();
+    const animal = await getOneAnimalById(id);
     res.json(animal);
 });
 
